@@ -11,7 +11,6 @@ class Deck:
         random.shuffle(self.deck)
 
     def start_game(self):
-        # print(f'Starting game!\n{len(self.players)} players in game.')
         for _ in range(2):
             for player in self.players:
                 player.get_start_cards(self.deck)
@@ -137,4 +136,3 @@ for i in range(250_000):
         writer = csv.DictWriter(file, fieldnames=fieldnames) 
         for player in deck.players:
             writer.writerow({'PlayerCard1': player.cards[0], 'PlayerCard2': player.cards[1], 'DealerHand': deck.dealer.cards[0], 'PlayerWin': player.win,  'PlayerChoices': player.choices[0]})
-# file.close()
