@@ -85,3 +85,18 @@ def get_total_games_win_loss_push():
         'total_win_rate': get_total_win_rate(),
         'total_loss_rate': get_total_loss_rate(),
         'total_push_rate': get_total_push_rate()}
+
+def get_best_choice():
+    with open('winning_rows.csv', 'r') as file:
+        reader = csv.reader(file)
+        data = list(reader)
+    best_choice = {}
+    best_choice_list = []
+    for i in range(1, len(data)):
+        best_choice[data[0][0]]= data[i][0]
+        best_choice[data[0][1]]= data[i][1]
+        best_choice[data[0][2]]= data[i][2]
+        best_choice[data[0][3]]= data[i][3]
+        best_choice_list.append(best_choice)
+        best_choice = {}
+    return best_choice_list
