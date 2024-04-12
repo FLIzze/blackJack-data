@@ -38,3 +38,10 @@ def get_push_rate(data, i):
     if int(data[i][6]) == 0:
         return 0
     return round(int(data[i][6]) / int(data[i][7])*100, 2)
+
+def get_total_games():
+    data = open_data()
+    total_games = 0
+    for i in range(1, len(data)):
+        total_games += int(data[i][7])
+    return total_games
