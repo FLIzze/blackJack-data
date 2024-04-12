@@ -1,4 +1,5 @@
 import csv
+import pandas as pd
 
 
 def open_data():
@@ -100,3 +101,8 @@ def get_best_choice():
         best_choice_list.append(best_choice)
         best_choice = {}
     return best_choice_list
+
+def get_hand_stats(hand:list)->list:
+    data = pd.read_csv('filterProba.csv')
+    hand_stats = data.loc[(data['PlayerCard1'] == hand[0]) & (data['PlayerCard2'] == hand[1]) & (data['DealerHand'] == hand[2])]
+    return hand_stats.values.tolist()
