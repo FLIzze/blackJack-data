@@ -45,3 +45,43 @@ def get_total_games():
     for i in range(1, len(data)):
         total_games += int(data[i][7])
     return total_games
+
+def get_total_wins():
+    data = open_data()
+    total_wins = 0
+    for i in range(1, len(data)):
+        total_wins += int(data[i][4])
+    return total_wins
+
+def get_total_losses():
+    data = open_data()
+    total_losses = 0
+    for i in range(1, len(data)):
+        total_losses += int(data[i][5])
+    return total_losses
+
+def get_total_pushes():
+    data = open_data()
+    total_pushes = 0
+    for i in range(1, len(data)):
+        total_pushes += int(data[i][6])
+    return total_pushes
+
+def get_total_win_rate():
+    return round(get_total_wins() / get_total_games()*100, 2)
+
+def get_total_loss_rate():
+    return round(get_total_losses() / get_total_games()*100, 2)
+
+def get_total_push_rate():
+    return round(get_total_pushes() / get_total_games()*100, 2)
+
+def get_total_games_win_loss_push():
+    return {
+        'total_games': get_total_games(),
+        'total_wins': get_total_wins(),
+        'total_losses': get_total_losses(),
+        'total_pushes': get_total_pushes(),
+        'total_win_rate': get_total_win_rate(),
+        'total_loss_rate': get_total_loss_rate(),
+        'total_push_rate': get_total_push_rate()}
