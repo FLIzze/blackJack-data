@@ -3,7 +3,7 @@ import random
 
 class Deck: 
     def __init__(self, nmb_player: int, nmb_deck: int = 1):
-        self.deck = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'] * 4 * nmb_deck
+        self.deck = ['2', '3', '4', '5', '6', '7', '8', '9', '10', '10', '10', '10', 'A'] * 4 * nmb_deck
         self.players = [Player('Player'+str(i+1)) for i in range (nmb_player)]
         self.dealer = Player('Dealer')
 
