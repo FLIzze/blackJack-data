@@ -105,4 +105,12 @@ def get_best_choice():
 def get_hand_stats(hand:list)->list:
     data = pd.read_csv('filterProba.csv')
     hand_stats = data.loc[(data['PlayerCard1'] == hand[0]) & (data['PlayerCard2'] == hand[1]) & (data['DealerHand'] == hand[2])]
-    return hand_stats.values.tolist()
+    stats = {}
+    for kk in hand_stats.values.tolist():
+        stats[kk[3]] = {
+            'Win': round(kk[4]/kk[7]*100, 2),
+            'Loss': round(kk[5]/kk[7]*100, 2),
+            'Push': round(kk[6]/kk[7]*100, 2),
+        }
+    print(stats)
+    return stats
