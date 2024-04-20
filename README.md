@@ -46,6 +46,11 @@ Or if you are on Linux you can run the scripts to run Api and the Dashboard :
 ``` 
 
 Enjoy it!
+
+## Credits
+
+Made by [Lytzeer](https://github.com/Lytzeer), [Flizze](https://github.com/FLIzze), [Matsuel](https://github.com/Matsuel) and [DoctorPok42](https://github.com/DoctorPok42).
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
