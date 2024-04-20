@@ -15,7 +15,7 @@ cd Blackjack_analyse
 
 npm install
 
-cd server && pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Usage
