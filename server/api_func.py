@@ -3,7 +3,7 @@ import pandas as pd
 
 
 def open_data():
-    with open('filterProba.csv', 'r') as file:
+    with open('./server/filterProba.csv', 'r') as file:
         reader = csv.reader(file)
         data = list(reader)
     return data
@@ -103,7 +103,7 @@ def get_best_choice():
     return best_choice_list
 
 def get_hand_stats(hand:list)->list:
-    data = pd.read_csv('filterProba.csv')
+    data = pd.read_csv('./server/filterProba.csv')
     hand_stats = data.loc[(data['PlayerCard1'] == hand[0]) & (data['PlayerCard2'] == hand[1]) & (data['DealerHand'] == hand[2])]
     stats = {}
     for kk in hand_stats.values.tolist():
