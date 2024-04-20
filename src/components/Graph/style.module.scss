@@ -1,0 +1,27 @@
+.Graph_container {
+  min-height: 8em;
+  background-color: #111c44;
+  border-radius: 12px;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .title {
+      padding: 0 1em;
+      padding-top: 1em;
+      font-size: 1.5em;
+      font-weight: 700;
+      color: var(--color-white);
+    }
+
+    .value {
+      padding: 0 1em;
+      font-size: 2em;
+      font-weight: 700;
+      color: var(--color-white);
+    }
+  }
+}

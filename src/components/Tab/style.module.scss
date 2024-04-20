@@ -1,0 +1,60 @@
+.HandInfos {
+  position: sticky;
+  top: 5em;
+  height: 0;
+
+  h3 {
+    text-transform: capitalize;
+  }
+
+  p {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+}
+
+.Tab_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-left: 5vw;
+
+  table {
+    width: 90%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: var(--color-box);
+    border-radius: 12px;
+    overflow: hidden;
+
+    th {
+      background-color: var(--color-primary);
+      color: var(--color-light);
+      font-weight: 600;
+      padding: 1em;
+    }
+
+    td {
+      padding: 1em;
+      border-bottom: 1px solid var(--color-primary);
+      border-left: 1px solid var(--color-primary);
+      font-size: 0.8em;
+      font-weight: 800;
+      text-transform: capitalize;
+      transition: var(--transition);
+
+      &:hover {
+        background-color: var(--color-primary) !important;
+      }
+    }
+
+    tr {
+      transition: var(--transition);
+
+      &:hover {
+        background-color: var(--color-primary);
+      }
+    }
+  }
+}

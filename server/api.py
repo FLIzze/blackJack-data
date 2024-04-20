@@ -23,7 +23,7 @@ def best_choice():
 def hand_stats():
     hand = [request.args.get('Card1'), request.args.get('Card2'), request.args.get('DealerHand')]
     return jsonify({'hand_stats': get_hand_stats(hand)}), 200
-    
+
 
 if __name__ == '__main__':
     app.run(debug=False)
