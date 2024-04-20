@@ -15,7 +15,11 @@ cd Blackjack_analyse
 
 npm install
 
-cd server && pip install -r requirements.txt
+pip install -r requirements.txt
+```
+You also need to create a .env file with the API URL like this (this example is the default used by the API) :
+```
+API_URL=http://localhost:5000/
 ```
 
 ## Usage
