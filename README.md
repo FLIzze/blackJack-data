@@ -22,6 +22,11 @@ You also need to create a .env file with the API URL like this (this example is 
 API_URL=http://localhost:5000/
 ```
 
+Or if you are on Linux you can run the script to setup the project :
+```bash
+./setup.sh
+```
+
 ## Usage
 
 To run the project, you need to start the server and the client. You can do this by running the following commands:
@@ -34,6 +39,13 @@ cd server && python api.py
 npm run dev
 ```
 
+Or if you are on Linux you can run the scripts to run Api and the Dashboard :
+```bash
+./run_api.sh
+./run_dash.sh
+``` 
+
+Enjoy it!
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
